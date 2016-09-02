@@ -35,11 +35,25 @@ Custom element to manage and display product information
               notify: true
             }, 
             /**
-             * Specifies the unique id for sending tracking events to segment.
+             * Database id of the product being viewed
              */
-            prop1: {
+            productId: {
               type: String,
-              value: 'epic-product',
+              notify:true
+            },
+            /**
+             * Database id of the product being viewed
+             */
+            id: {
+              type: String,
+              notify:true
+            },
+            /**
+             * Sku of the product being viewed
+             */
+             sku: {
+              type: String,
+              notify:true
             }
           };
         }

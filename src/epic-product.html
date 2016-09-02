@@ -33,13 +33,6 @@ Custom element to manage and display product information
               type: Boolean,
               value: false,
               notify: true
-            }, 
-            /**
-             * Database id of the product being viewed
-             */
-            productId: {
-              type: String,
-              notify:true
             },
             /**
              * Database id of the product being viewed
@@ -53,6 +46,125 @@ Custom element to manage and display product information
              */
              sku: {
               type: String,
+              notify:true
+            },
+            /**
+             * Product category to which this product belongs
+             */
+             category: {
+              type: String,
+              notify:true
+            },
+            /**
+             * Product Collection this product belongs to
+             */
+             collection: {
+              type: String,
+              notify:true
+            },
+            /**
+             * Name of the product
+             */
+             name: {
+              type: String,
+              notify:true
+            },
+            /**
+             * Brand associated with the product
+             */
+             brand: {
+              type: String,
+              notify:true
+            },
+            /**
+             * Variant of the product (e.g. Black)
+             */
+             variant: {
+              type: String,
+              notify:true
+            },
+            /**
+             * Quantity of a product (in cart, whichlist, order, etc)
+             */
+             quantity: {
+              type: Number,
+              notify:true
+            },
+            /**
+             * Current Price of the product
+             */
+             price: {
+              type: Number,
+              notify:true
+            },
+            /**
+             * Coupon code associated with a product
+             */
+             coupon: {
+              type: String,
+              notify:true
+            },
+            /**
+             * Position in the product list (ex. 3)
+             */
+             position: {
+              type: Number,
+              notify:true
+            },
+            /**
+             * Number of reviews associated with product
+             */
+             reviewCount: {
+              type: Number,
+              notify:true
+            },
+            /**
+             * Average rating from product reviews
+             */
+             rating: {
+              type: Number,
+              notify:true
+            },
+            /**
+             * Describes the product frame
+             */
+             frame: {
+              type: String,
+              notify:true
+            },
+            /**
+             * Describe the product lens
+             */
+             lens: {
+              type: String,
+              notify:true
+            },
+            /**
+             * specifies the product fit
+             */
+             fit: {
+              type: String,
+              notify:true
+            },
+            /**
+             * Describes the lens material of the product
+             */
+             lensMaterial: {
+              type: String,
+              notify:true
+            },
+            /**
+             * Specifies if the product is currently in stock
+             */
+             inStock: {
+              type: Boolean,
+              notify:true
+            },
+            /**
+             * Specifies if the product is on the current user's wishlist
+             */
+             onWishList: {
+              type: Boolean,
               notify:true
             }
           };

@@ -1,0 +1,52 @@
+<link rel="import" href="../../polymer/polymer.html">
+
+<!--
+`epic-product`
+Custom element to manage and display product information
+
+@demo demo/index.html
+-->
+
+<dom-module id="epic-product">
+  <template>
+    <template is="dom-if" if="[[!headless]]">
+      <h2>Hi [[prop1]]</h2>
+    </template>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      class EpicProduct {
+
+        // Element setup goes in beforeRegister instead of createdCallback.
+        beforeRegister() {
+          this.is = 'epic-product';
+          // Define the properties object in beforeRegister.
+          this.properties = {
+            /**
+             * Specifies if the product should display a graphic UI. 
+             * If `false`, only manage the data with out ui.
+             */
+            headless: {
+              type: Boolean,
+              value: false,
+              notify: true
+            }, 
+            /**
+             * Specifies the unique id for sending tracking events to segment.
+             */
+            prop1: {
+              type: String,
+              value: 'epic-product',
+            }
+          };
+        }
+      }
+
+      // Register the element using Polymer's constructor.
+      Polymer(EpicProduct);
+    })();
+  </script>
+</dom-module>
